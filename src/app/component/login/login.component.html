@@ -1,0 +1,127 @@
+<app-navbar></app-navbar>
+<section class="fondo">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 text-black">
+                <!--<img src="assets/img/logo.png" alt="" style="width:150px; padding-left: 35px; padding-top: 10px;">-->
+                <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5 formulario">
+                    <form [formGroup]="formValue" style="width: 23rem;">
+                        <div *ngIf="mensaje_ok">
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <strong>{{mensaje_ok}}</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+                                    (click)="cerrarAlerta()"></button>
+                            </div>
+                        </div>
+                        <div *ngIf="mensaje_error">
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong>{{mensaje_error}}</strong>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                        <div class="form-outline my-2">
+                            <label class="form-label titulo-2" for="form2Example18">Correo</label>
+                            <input type="email" id="form2Example18" class="form-control form-control-lg"
+                                formControlName="correo" />
+                        </div>
+                        <div class="form-outline my-2">
+                            <label class="form-label titulo-2" for="form2Example28">Contaseña</label>
+                            <input type="password" id="form2Example28" class="form-control form-control-lg"
+                                formControlName="contrasena" />
+                        </div>
+                        <div class="pt-1 my-2 ">
+                            <button class="btn btn-lg btn-block login" type="button" (click)="login()">Login</button>
+                        </div>
+                        <p>Aun no tienes cuenta ?
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal" data-bs-whatever="@fat">Registrate aqui</button>
+
+                            <!--  <button type="button" class="btn btn-primary" routerLink="/registroUsuario">Registrate
+                                aqui</button> -->
+
+                        </p>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-6 px-0 d-none d-sm-block imagen">
+                <img src="assets/img/login.png" alt="Login image" class="w-100 vh-100"
+                    style="object-fit: cover; object-position: left;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Registate</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="formValue">
+                    <div *ngIf="mensaje_ok">
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>{{mensaje_ok}}</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+                                (click)="cerrarAlerta()"></button>
+                        </div>
+                    </div>
+                    <div *ngIf="mensaje_error">
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>{{mensaje_error}}</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <label>Nombre</label>
+                            <input type="text" class="form-control" formControlName="nombres">
+                        </div>
+                        <div class="col-md-12">
+                            <label>Primer apellido</label>
+                            <input type="text" class="form-control" formControlName="primerApellido">
+                        </div>
+                        <div class="col-md-12">
+                            <label>Segundo apellido</label>
+                            <input type="text" class="form-control" formControlName="segundoApellido">
+                        </div>
+                        <div class="col-md-12">
+                            <label>Cedula</label>
+                            <input type="text" class="form-control" formControlName="cedula">
+                        </div>
+                        <div class="col-md-12">
+                            <label>ciudad</label>
+                            <input type="text" class="form-control" formControlName="ciudad">
+                        </div>
+
+                        <div class="col-md-12">
+                            <label>correo</label>
+                            <input type="email" class="form-control" formControlName="correo">
+                        </div>
+
+                        <div class="col-md-12">
+                            <label>contraseña</label>
+                            <input type="password" class="form-control" formControlName="contrasena">
+                        </div>
+                        <div class="col-md-12">
+                            <label>Rol</label>
+                            <select class="form-control" formControlName="rol">
+                                <option value="" selected>SELECCIONAR</option>
+                                <option *ngFor="let item of rol" value="{{item}}">{{item}}</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" (click)="crearUsuario()">Registarte</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div> -->

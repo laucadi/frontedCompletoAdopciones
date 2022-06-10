@@ -1,0 +1,163 @@
+<div (click)="onPress($event)" [ngClass]="{ modal: true, fade: true, show: showModal }">
+    <div id="outer" class="wrapper">
+        <form action="">
+            <div id="wizard" class="scroll">
+                <!-- SECTION 1 -->
+                <form #mascotaForm="ngForm" (ngSubmit)=" onSubmit (mascotaForm)">
+                    <section>
+                        <div class="form-header">
+                            <div class="avartar">
+                                <a>
+                                  <img alt="Chris Wood" [src]=" imgSelect || '../../../../assets/img/16.png'" class="rounded-circle img-responsive mt-2" width="128" height="128">
+
+                                </a>
+                                <div class="avartar-picker">
+                                    <input type="file"  id="file-1" class="inputfile"
+                                        data-multiple-caption="{count} files selected" #imagen="ngModel" name="imagen"
+                                        [(ngModel)]="mascota.imagen" (change)="seleccionarImagen($event)" />
+                                    <label for="file-1">
+                                        <i class="bi bi-camera"></i>
+                                        <span>Choose Picture</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-holder active">
+                                    <input type="text" required placeholder="Nombre" class="form-control"
+                                        #nombre="ngModel" name="nombre" [(ngModel)]="mascota.nombre" />
+                                    <span *ngIf="this.formModal.get('nombre')?.errors?.['required']">
+                                        (El nombre no puede quedar vacío)
+                                    </span>
+                                    <span *ngIf="this.formModal.get('nombre')?.errors?.['minlength']">
+                                    </span>
+                                </div>
+                                <div class="form-holder">
+                                    <h5 class="estado">Especie de la mascota</h5>
+                                    <select class="form-control" required #especie="ngModel" name="especie"
+                                        [(ngModel)]="mascota.especie">
+                                        <option value="" selected>SELECCIONAR</option>
+                                        <option *ngFor="let especie of especies" value="{{ especie.value }}">
+                                            {{ especie.value }}
+                                        </option>
+                                    </select>
+                                </div>
+                                <!-- <div class="form-holder">
+                    <input
+                      type="text"
+                      formControlName="especie"
+                      required
+                      placeholder="Especie"
+                      class="form-control"
+                    />
+                    <span
+                      *ngIf="this.formModal.get('especie')?.errors?.['required']"
+                    >
+                      (Es necesario saber la especie)
+                    </span>
+                    <span
+                      *ngIf="this.formModal.get('especie')?.errors?.['minlength']"
+                    >
+                    </span>
+                  </div> -->
+                                <div class="form-holder">
+                                    <h5 class="estado">Sexo de la mascota</h5>
+                                    <select class="form-control" required #sexo="ngModel" name="sexo"
+                                        [(ngModel)]="mascota.sexo"> >
+                                        <option value="" selected>SELECCIONAR</option>
+                                        <option *ngFor="let sexo of sexos" value="{{ sexo.value }}">
+                                            {{ sexo.label }}
+                                        </option>
+                                    </select>
+                                </div>
+                                <!-- <div class="form-holder">
+                    <input type="text"  formControlName="sexo"
+                    required placeholder="Sexo" class="form-control" />
+                    <span
+                      *ngIf="this.formModal.get('sexo')?.errors?.['required']"
+                    >
+                      (Es necesario saber el sexo de la mascota)
+                    </span>
+                    <span
+                      *ngIf="this.formModal.get('sexo')?.errors?.['minlength']"
+                    >
+                    </span>
+                  </div> -->
+                            </div>
+                        </div>
+                        <div class="form-holder">
+                            <input type="text" required placeholder="Raza" class="form-control" #raza="ngModel"
+                                name="raza" [(ngModel)]="mascota.raza" />
+                            <span *ngIf="this.formModal.get('raza')?.errors?.['required']">
+                                (Es necesario saber la raza)
+                            </span>
+                            <span *ngIf="this.formModal.get('raza')?.errors?.['minlength']">
+                            </span>
+                        </div>
+
+                        <div class="form-holder">
+                            <h5 class="estado">¿Se encuentra esterilizado(a)?</h5>
+                            <select class="form-control" required #estadoDeEsterilizacion="ngModel"
+                                name="estadoDeEsterilizacion" [(ngModel)]="mascota.estadoDeEsterilizacion"> >
+                                <option value="" selected>SELECCIONAR</option>
+                                <option *ngFor="let estado of estados" value="{{ estado.value }}">
+                                    {{ estado.label }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-holder">
+                            <h5 class="estado">¿Cuenta con las vacunas completas?</h5>
+                            <select class="form-control" required #estadoDeVacunacion="ngModel"
+                                name="estadoDeVacunacion" [(ngModel)]="mascota.estadoDeVacunacion">
+                                <option value="" selected>SELECCIONAR</option>
+                                <option *ngFor="let estado of estados" value="{{ estado.value }}">
+                                    {{ estado.label }}
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="form-holder">
+                            <textarea name="descripcionDeLaMascota" requiredrows="20"
+                                placeholder="Haz una pequeña descripción de la mascota" cols="80"
+                                #descripcionDeLaMascota="ngModel" name="descripcionDeLaMascota"
+                                [(ngModel)]="mascota.descripcionDeLaMascota"></textarea>
+                        </div>
+
+                        <!-- <div class="form-holder">
+                <input
+                  type="text"
+                  formControlName="descripcionDeLaMascota"
+                  required
+                  placeholder="Descripción de la mascota"
+                  class="form-control"
+                />
+                <span
+                  *ngIf="this.formModal.get('descripcion')?.errors?.['required']"
+                >
+                  (Cuentanos un poco de la mascota)
+                </span>
+                <span
+                  *ngIf="this.formModal.get('descripcion')?.errors?.['minlength']"
+                >
+                </span>
+              </div> -->
+                        <label for="start" class="fNacimiento">Fecha de nacimiento:</label>
+
+                        <input class="fecha" type="date" id="start" name="trip-start" required
+                            #fechaDeNacimiento="ngModel" name="fechaDeNacimiento"
+                            [(ngModel)]="mascota.fechaDeNacimiento" />
+                        <div class="container my-3 pl-5 d-flex flex-row">
+                            <label>La edad de la mascota es:</label>&nbsp;
+                            <p>{{ this.calcularEdad() }}</p>
+
+                        </div>
+                        <div class="conboton">
+                            <button type="submit" class="btn mt-4 be">Enviar</button>
+
+
+                        </div>
+                    </section>
+                </form>
+            </div>
+        </form>
+    </div>
+</div>

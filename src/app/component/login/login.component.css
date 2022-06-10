@@ -1,0 +1,55 @@
+section {
+    overflow: hidden;
+    background-color: #6200EE;
+    height: 92vh;
+}
+
+.formulario {
+    background-color: #6200EE;
+
+}
+
+.bg-image-vertical {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+
+}
+
+form {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.titulo-2 {
+    font-size: 1.2em;
+    color: aliceblue;
+}
+
+input {
+    background-color: aliceblue;
+}
+
+.login {
+    background-color: #FFC107;
+}
+
+p {
+    color: #FFC107;
+
+}
+
+a {
+    text-decoration: none;
+    color: #EE6002;
+
+
+}
+
+
+@media (min-width: 1025px) {
+    .h-custom-2 {
+        height: 100%;
+    }
+}
