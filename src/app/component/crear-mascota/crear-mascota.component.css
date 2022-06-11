@@ -1,3 +1,100 @@
 .encabezado {
-    background-color: #26A69A;
+    background-color: #2A9D8F
+}
+
+.fondo-usuario {
+    position: relative;
+}
+
+svg {
+    position: absolute;
+    right: 0;
+    top: -90px;
+}
+
+
+
+.mascotas-cards {
+    justify-content: space-evenly;
+
+}
+
+.profile-card {
+    width: 350px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
+}
+
+.profile-image {
+    position: relative;
+    top: -60px;
+    left: 50px;
+    border-radius: 1rem;
+    background-image: url(../../../assets/img/img-11.png);
+    width: 11rem;
+    height: 11rem;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+
+.profile-info {
+    text-align: center;
+    margin-top: -3rem;
+    margin-bottom: 1rem;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.profile-info>.profile-name {
+    color: #212121;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 20px;
+}
+
+.profile-info>.profile-desc {
+    color: #666666;
+    font-size: 0.9rem;
+}
+
+.status {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 1rem;
+    margin-bottom: 1.3rem;
+}
+
+.status-value {
+    color: #212121;
+    font-weight: 700;
+}
+
+.status-text {
+    font-size: 0.8rem;
+    color: #7c7c7d;
+}
+
+.action {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    border: none;
+    padding: 0.8em 1.9em;
+    border-radius: 0.35rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.boton-adoptar {
+    margin: 0 auto;
+    background-color: #E76F51;
+    color: #ffff;
 }
