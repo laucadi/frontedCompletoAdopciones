@@ -1,68 +1,69 @@
 <app-navbar></app-navbar>
 <main class="flex-shrink-0">
     <!-- Header-->
-    <header class="encabezado py-5">
+    <header>
+        <img src="../../../assets/img/wave-1.svg" />
+        <img src="../../../assets/img/wave-1.svg" />
+        <img src="../../../assets/img/wave-1.svg" />
+        <img src="../../../assets/img/wave-1.svg" />
+        <img src="../../../assets/img/wave-1.svg" id="shape" />
         <div class="container px-5">
             <div class="row gx-5 align-items-center justify-content-center">
-                <div class="col-lg-8 col-xl-7 col-xxl-6 fondo-usuario">
-                    <svg viewBox="0 0 200 200">
-                        <path fill="#264653"
-                            d="M48,-54.6C54.5,-41.5,46.7,-20.7,43.7,-3C40.7,14.7,42.4,29.4,35.9,42.4C29.4,55.3,14.7,66.5,1.5,65.1C-11.7,63.6,-23.5,49.4,-39.3,36.4C-55.1,23.5,-75,11.7,-75.9,-0.9C-76.8,-13.5,-58.7,-27,-42.8,-40.2C-27,-53.4,-13.5,-66.2,3.6,-69.8C20.7,-73.4,41.5,-67.8,48,-54.6Z"
-                            transform="translate(100 100)" />
-                    </svg>
-                    <div class="my-5 text-center text-xl-start">
-                        <h1 class="display-5 fw-bolder text-white mb-2">Bienvenido {{nombre}}</h1>
-                        <p class="lead fw-normal text-white-50 mb-4">En este espacio puedes registar, editar, actualizar
+                <div class="col-lg-12 col-xl-7 col-xxl-12 fondo-usuario">
+                    <div class="my-5 text-center text-xl-start bienvenido">
+                        <h1 class=" text-white mb-4">Bienvenido {{nombre}}</h1>
+                        <p class="lead fw-normal mb-4">En este espacio puedes registar, editar, actualizar
                             y eliminar las mascotas que deseas dar en adopcion!
                         </p>
-                        <button type="submit" (click)="modal()" class="btn mt-4">
+                        <button type="submit" (click)="modal()" class="btn mt-4 crear">
                             Crear mascota
                         </button>
                     </div>
+
                 </div>
-                <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5"
-                        src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+                <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-end paws"><img class="img-fluid rounded-3 my-5"
+                        src="../../../assets/img/paws.png" alt="..." /></div>
             </div>
         </div>
     </header>
+
+
+    <!-- <header class="encabezado">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center justify-content-center">
+
+                <div class="col-lg-6 col-xl-7 col-xxl-6 fondo-usuario">
+                    <div class="my-5 text-center text-xl-start bienvenido">
+                        <h1 class=" text-white mb-4">Bienvenido {{nombre}}</h1>
+                        <p class="lead fw-normal mb-4">En este espacio puedes registar, editar, actualizar
+                            y eliminar las mascotas que deseas dar en adopcion!
+                        </p>
+                        <button type="submit" (click)="modal()" class="btn mt-4 crear">
+                            Crear mascota
+                        </button>
+                    </div>
+
+                </div>
+                <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-end paws"><img class="img-fluid rounded-3 my-5"
+                        src="../../../assets/img/paws.png" alt="..." /></div>
+            </div>
+        </div>
+
+    </header> -->
+    <!-- <div class="forma">
+    </div> -->
     <!-- Blog preview section-->
     <section class="py-5">
         <div class="container px-5 my-5">
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-8 col-xl-6">
-                    <div class="text-center">
+                    <div class="text-center tituloDos">
                         <h2 class="fw-bolder">Tus mascotas agregadas</h2>
-                        <p class="lead fw-normal text-muted mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Eaque fugit ratione dicta mollitia. Officiis ad.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <!--cards-->
-        <!--   <section class="row">
-            <figure class="col-12 snip0056">
-                <figcaption>
-                    <h2>Stuart <span>White</span></h2>
-                    <p>I suppose if we couldn't laugh at things that don't make sense, we couldn't react to a lot of
-                        life.
-                    </p>
-                    <div class="icons"><a href="#"><i class="ion-ios-home"></i></a><a href="#"><i
-                                class="ion-ios-email"></i></a><a href="#"><i class="ion-ios-telephone"></i></a></div>
-                </figcaption><img src="../../../assets/img/editarUsuario.jpg" alt="sample8" />
-                <div class="position">Web Designer</div>
-            </figure>
-            <figure class="col-12 snip0056 yellow">
-                <figcaption>
-                    <h2>Diana <span>Reed</span></h2>
-                    <p>The only skills I have patience to learn are those that have no real application in life.</p>
-                    <div class="icons"><a href="#"><i class="ion-ios-home"></i></a><a href="#"><i
-                                class="ion-ios-email"></i></a><a href="#"><i class="ion-ios-telephone"></i></a></div>
-                </figcaption>
 
-                <img src="../../../assets/img/pexels-gillian-harrison-4668425 (1).jpg" alt="sample9" />
-                <div class="position">Sales Manager</div>
-            </figure>
-        </section>-->
 
         <!--estilo#2-->
         <div class="row mascotas-cards">
@@ -73,7 +74,8 @@
                     <div class="profile-info">
                         <h3 class="profile-name">Nombre mascota</h3>
                         <p class="profile-desc">sexo</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quibusdam explicabo iusto fuga
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quibusdam explicabo iusto
+                            fuga
                             nesciunt accusantium..</p>
                     </div>
                 </div>
@@ -111,7 +113,8 @@
                     <div class="profile-info">
                         <h3 class="profile-name">Nombre mascota</h3>
                         <p class="profile-desc">sexo</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel velit accusamus consectetur nisi
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel velit accusamus consectetur
+                            nisi
                             maxime nihil.</p>
                     </div>
                 </div>
@@ -150,7 +153,8 @@
                     <div class="profile-info">
                         <h3 class="profile-name">Nombre mascota</h3>
                         <p class="profile-desc">sexo</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus minus quod incidunt quidem
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus minus quod incidunt
+                            quidem
                             aspernatur dignissimos!</p>
                     </div>
                 </div>
