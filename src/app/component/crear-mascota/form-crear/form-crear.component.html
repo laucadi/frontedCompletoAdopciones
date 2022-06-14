@@ -8,11 +8,12 @@
                         <div class="form-header">
                             <div class="avartar">
                                 <a>
-                                  <img alt="Chris Wood" [src]=" imgSelect || '../../../../assets/img/16.png'" class="rounded-circle img-responsive mt-2" width="128" height="128">
+                                    <img alt="Chris Wood" [src]=" imgSelect || '../../../../assets/img/16.png'"
+                                        class="rounded-circle img-responsive mt-2" width="128" height="128">
 
                                 </a>
                                 <div class="avartar-picker">
-                                    <input type="file"  id="file-1" class="inputfile"
+                                    <input type="file" id="file-1" class="inputfile"
                                         data-multiple-caption="{count} files selected" #imagen="ngModel" name="imagen"
                                         [(ngModel)]="mascota.imagen" (change)="seleccionarImagen($event)" />
                                     <label for="file-1">
@@ -151,7 +152,7 @@
 
                         </div>
                         <div class="conboton">
-                            <button type="submit" class="btn mt-4 be">Enviar</button>
+                            <button type="submit" (click)="reloadCurrentPage()" class="btn mt-4 be">Enviar</button>
 
 
                         </div>

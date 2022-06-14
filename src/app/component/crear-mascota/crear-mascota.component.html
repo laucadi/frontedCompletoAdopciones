@@ -67,16 +67,18 @@
 
         <!--estilo#2-->
         <div class="row mascotas-cards">
-            <div class="profile-card col-4">
+            <div class="profile-card col-4" *ngFor="let item of datosMascota;">
                 <div class="profile-card-header">
-                    <div class="profile-image"></div>
+                    <div class="profile-image">
+                        <img [src]="base_url + 'mascotas/mascotas/img/'+ item.imagen" width="200px" height="200px"
+                            style="border-radius:20px;" alt="Avatar">
+
+                    </div>
 
                     <div class="profile-info">
-                        <h3 class="profile-name">Nombre mascota</h3>
-                        <p class="profile-desc">sexo</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quibusdam explicabo iusto
-                            fuga
-                            nesciunt accusantium..</p>
+                        <h3 class="profile-name">{{item.nombre}}</h3>
+                        <p class="profile-desc">{{item.especie}}</p>
+                        <p>{{item.descripcionDeLaMascota}}</p>
                     </div>
                 </div>
 
@@ -89,104 +91,35 @@
                         </li>
 
                         <li>
-                            <span class="status-value">felino</span>
+                            <span class="status-value">{{item.especie}}</span>
                             <hr>
                             <span class="status-text">Especie</span>
                         </li>
                         <li>
-                            <span class="status-value">Bogota</span>
+                            <span class="status-value">{{item.raza}}</span>
                             <hr>
-                            <span class="status-text">ciudad</span>
+                            <span class="status-text">Raza</span>
                         </li>
                     </ul>
+                    <div class=" row acciones">
+                        <button class="btn col-6" (click)="eliminarMascota(item)"><i
+                                class="fa-solid fa-trash-can"></i></button>
 
-                    <div class="action">
+                        <button class="btn col-6"><i class="fa-solid fa-pencil"></i></button>
+                    </div>
+
+                    <!-- <div class="action">
 
                         <button class="btn boton-adoptar">Adoptar</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="profile-card col-4">
-                <div class="profile-card-header">
-                    <div class="profile-image"></div>
-                    <div class="profile-info">
-                        <h3 class="profile-name">Nombre mascota</h3>
-                        <p class="profile-desc">sexo</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel velit accusamus consectetur
-                            nisi
-                            maxime nihil.</p>
-                    </div>
-                </div>
-
-                <div class="profile-card-body">
-                    <ul class="status">
-                        <li>
-                            <span class="status-value">2 años</span>
-                            <hr>
-                            <span class="status-text">edad</span>
-                        </li>
-
-                        <li>
-                            <span class="status-value">felino</span>
-                            <hr>
-                            <span class="status-text">Especie</span>
-                        </li>
-                        <li>
-                            <span class="status-value">Bogota</span>
-                            <hr>
-                            <span class="status-text">ciudad</span>
-                        </li>
-                    </ul>
-
-                    <div class="action">
-                        <button class="btn boton-adoptar">Adoptar</button>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="profile-card col-4">
-                <div class="profile-card-header">
-                    <div class="profile-image"></div>
-
-                    <div class="profile-info">
-                        <h3 class="profile-name">Nombre mascota</h3>
-                        <p class="profile-desc">sexo</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus minus quod incidunt
-                            quidem
-                            aspernatur dignissimos!</p>
-                    </div>
-                </div>
-
-                <div class="profile-card-body">
-                    <ul class="status">
-                        <li>
-                            <span class="status-value">2 años</span>
-                            <hr>
-                            <span class="status-text">edad</span>
-                        </li>
-
-                        <li>
-                            <span class="status-value">felino</span>
-                            <hr>
-                            <span class="status-text">Especie</span>
-                        </li>
-                        <li>
-                            <span class="status-value">Bogota</span>
-                            <hr>
-                            <span class="status-text">ciudad</span>
-                        </li>
-                    </ul>
-
-                    <div class="action">
-
-                        <button class="btn boton-adoptar">Adoptar</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
 
+
+
+
     </section>
+
     <app-form-crear [showModal]="showModal" (onCloseModal)="onCloseModal()"></app-form-crear>
 </main>

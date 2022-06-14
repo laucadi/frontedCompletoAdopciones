@@ -157,6 +157,7 @@ header img:nth-child(4) {
     background-color: white;
     border-radius: 1rem;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
+    margin-bottom: 60px;
 }
 
 .profile-image {
@@ -164,13 +165,18 @@ header img:nth-child(4) {
     top: -60px;
     left: 50px;
     border-radius: 1rem;
-    background-image: url(../../../assets/img/img-11.png);
+    /*background-image: url(../../../assets/img/img-11.png);*/
     width: 11rem;
     height: 11rem;
     background-position: center;
     background-size: cover;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
 }
+
+.acciones {
+    justify-content: space-around;
+}
+
 
 
 

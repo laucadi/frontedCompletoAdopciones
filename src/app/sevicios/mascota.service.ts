@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
+import { UsuarioService } from './usuario.service';
 
 const base_url = environment.url;
 
@@ -9,7 +10,13 @@ const base_url = environment.url;
   providedIn: 'root',
 })
 export class MascotaService {
-  constructor(private http: HttpClient) {}
+  token: any;
+  constructor(
+    private http: HttpClient,
+    private usuarioService: UsuarioService
+  ) {
+    this.token = this.usuarioService.obtenerToken();
+  }
 
   crearMascota() {
     return this.http.get<any>(base_url + 'mascotas/crearMascota').pipe(
@@ -62,5 +69,15 @@ export class MascotaService {
   }
   eliminarMascota(_id: string) {
     return this.http.delete(base_url + 'mascotas/eliminarMascota/' + _id);
+  }
+
+  mascotaPorUsuario(id: any) {
+    return this.http
+      .get<any>(base_url + 'mascotas/mascotaPorUsuario/' + id)
+      .pipe(
+        map((res: any) => {
+          return res;
+        })
+      );
   }
 }
