@@ -159,10 +159,13 @@ export class LoginComponent implements OnInit {
       this.usuarioService.crear(this.usuariosModel).subscribe(
         (res) => {
           console.log(res);
-          if (res.mensaje == 'Este usuario ya existe, trata con uno nuevo') {
+          if (
+            res.mensaje == 'Este usuario ya existe, trata con un nuevo correo'
+          ) {
+            alert(res.mensaje);
             this.mensaje_error = res.mensaje;
           } else {
-            this.mensaje_ok = 'Se registro correctamente';
+            this.mensaje_ok = 'Bienvenido';
             setTimeout(() => {
               this.router.navigate(['login']);
             }, 2000);

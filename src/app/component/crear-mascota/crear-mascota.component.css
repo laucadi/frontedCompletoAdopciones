@@ -1,16 +1,34 @@
 .encabezado {
-    background-color: #2A9D8F;
+    background-image: linear-gradient(to right, #ffffff, #d9e2f2, #a1cae0, #62b5c0, #2a9d8f);
     position: relative;
-    height: 60vh;
+    height: 70vh;
 }
 
-header {
-    height: 60vh;
-    background-color: #2A9D8F;
-    position: relative;
-    overflow: hidden;
+.container {
+    height: 70vh;
 }
 
+
+.bienvenido button {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-family: 'Tajawal', sans-serif;
+    background-color: #264653;
+    color: #ffff;
+    border: none;
+    padding: 0.8em 1.9em;
+    border-radius: 0.35rem;
+    cursor: pointer;
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+/* cambios opcion # 1
+#shape {
+    position: absolute;
+    left: 0;
+    bottom: -2vw;
+}
 .bienvenido button {
     font-family: "Poppins", sans-serif;
     position: absolute;
@@ -26,12 +44,6 @@ header {
     border-radius: 0.35rem;
     cursor: pointer;
     font-weight: 600;
-}
-
-#shape {
-    position: absolute;
-    left: 0;
-    bottom: -2vw;
 }
 
 img:not(#shape) {
@@ -86,7 +98,12 @@ header img:nth-child(4) {
         transform: translateY(20px);
     }
 }
-
+header {
+    height: 70vh;
+    background-color: #2A9D8F;
+    position: relative;
+    overflow: hidden;
+}
 .bienvenido h1 {
     width: 100%;
     font-family: "Poppins", sans-serif;
@@ -118,32 +135,32 @@ header img:nth-child(4) {
     position: absolute;
     left: 0;
     top: -30px;
+} */
+
+/*cambios opcion # 2 */
+.bienvenido {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+.bienvenido h1 {
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    color: rgb(25, 25, 25);
+    font-weight: 700;
+    font-size: 3.5em;
+}
+
 
 .fondo-usuario {
-    position: relative;
+    height: 70vh;
 }
-
-
-
 
 .bienvenido p {
     font-family: 'Tajawal', sans-serif;
 }
-
-.crear button {
-    font-family: 'Tajawal', sans-serif;
-    margin: 0 auto;
-    background-color: #E76F51;
-    color: #ffff;
-    border: none;
-    padding: 0.8em 1.9em;
-    border-radius: 0.35rem;
-    cursor: pointer;
-    font-weight: 600;
-
-}
-
 
 
 .mascotas-cards {

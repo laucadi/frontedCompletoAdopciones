@@ -52,13 +52,13 @@ export class FormCrearComponent implements OnInit {
     nombres: ['', [Validators.required]],
     especie: ['', [Validators.required]],
     sexo: ['', [Validators.required]],
-    raza: ['', [Validators.required, Validators.minLength(4)]],
+    raza: ['', [Validators.required, Validators.minLength(2)]],
     estadoDeEsterilizacion: ['', [Validators.required]],
     estadoDeVacunacion: ['', [Validators.required]],
     imagen: [this.file],
     descripcionDeLaMascota: [
       '',
-      [Validators.required, Validators.minLength(15)],
+      [Validators.required, Validators.minLength(10)],
     ],
     fechaDeNacimiento: [new Date().toISOString(), [Validators.required]],
   });

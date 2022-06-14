@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <main class="flex-shrink-0">
-    <!-- Header-->
-    <header>
+    <!-- Header opcion # 1-->
+    <!-- <header>
         <img src="../../../assets/img/wave-1.svg" />
         <img src="../../../assets/img/wave-1.svg" />
         <img src="../../../assets/img/wave-1.svg" />
@@ -12,6 +12,27 @@
                 <div class="col-lg-12 col-xl-7 col-xxl-12 fondo-usuario">
                     <div class="my-5 text-center text-xl-start bienvenido">
                         <h1 class=" text-white mb-4">Bienvenido {{nombre}}</h1>
+                        <p class="lead fw-normal mb-4 subtitulo">En este espacio puedes registar, editar, actualizar
+                            y eliminar las mascotas que deseas dar en adopcion!
+                        </p>
+                        <button type="submit" (click)="modal()" class="btn mt-4 crear">
+                            Crear mascota
+                        </button>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-end paws"><img class="img-fluid rounded-3 my-5"
+                        src="../../../assets/img/paws.png" alt="..." /></div>
+            </div>
+        </div>
+    </header> -->
+
+
+    <header class="encabezado">
+        <div class="container px-5">
+            <div class="row gx-5 align-items-center justify-content-center">
+                <div class="col-lg-6 col-xl-7 col-xxl-6 fondo-usuario">
+                    <div class="my-5 text-center text-xl-start bienvenido">
+                        <h1 class=" mb-4">Bienvenido {{nombre}}</h1>
                         <p class="lead fw-normal mb-4">En este espacio puedes registar, editar, actualizar
                             y eliminar las mascotas que deseas dar en adopcion!
                         </p>
@@ -19,37 +40,11 @@
                             Crear mascota
                         </button>
                     </div>
-
                 </div>
-                <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-end paws"><img class="img-fluid rounded-3 my-5"
-                        src="../../../assets/img/paws.png" alt="..." /></div>
+                <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-end paws"></div>
             </div>
         </div>
     </header>
-
-
-    <!-- <header class="encabezado">
-        <div class="container px-5">
-            <div class="row gx-5 align-items-center justify-content-center">
-
-                <div class="col-lg-6 col-xl-7 col-xxl-6 fondo-usuario">
-                    <div class="my-5 text-center text-xl-start bienvenido">
-                        <h1 class=" text-white mb-4">Bienvenido {{nombre}}</h1>
-                        <p class="lead fw-normal mb-4">En este espacio puedes registar, editar, actualizar
-                            y eliminar las mascotas que deseas dar en adopcion!
-                        </p>
-                        <button type="submit" (click)="modal()" class="btn mt-4 crear">
-                            Crear mascota
-                        </button>
-                    </div>
-
-                </div>
-                <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-end paws"><img class="img-fluid rounded-3 my-5"
-                        src="../../../assets/img/paws.png" alt="..." /></div>
-            </div>
-        </div>
-
-    </header> -->
     <!-- <div class="forma">
     </div> -->
     <!-- Blog preview section-->
@@ -63,8 +58,6 @@
                 </div>
             </div>
         </div>
-
-
         <!--estilo#2-->
         <div class="row mascotas-cards">
             <div class="profile-card col-4" *ngFor="let item of datosMascota;">
@@ -72,16 +65,13 @@
                     <div class="profile-image">
                         <img [src]="base_url + 'mascotas/mascotas/img/'+ item.imagen" width="200px" height="200px"
                             style="border-radius:20px;" alt="Avatar">
-
                     </div>
-
                     <div class="profile-info">
                         <h3 class="profile-name">{{item.nombre}}</h3>
                         <p class="profile-desc">{{item.especie}}</p>
                         <p>{{item.descripcionDeLaMascota}}</p>
                     </div>
                 </div>
-
                 <div class="profile-card-body">
                     <ul class="status">
                         <li>
