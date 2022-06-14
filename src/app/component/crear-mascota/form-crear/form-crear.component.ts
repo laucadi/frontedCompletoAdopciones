@@ -3,6 +3,7 @@ import { Input, Output, EventEmitter } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { MascotaService } from 'src/app/sevicios/mascota.service';
 import { Mascota } from '../../models/mascotas.models';
+import { UsuarioService } from 'src/app/sevicios/usuario.service';
 
 @Component({
   selector: 'app-form-crear',
@@ -29,6 +30,7 @@ export class FormCrearComponent implements OnInit {
   public imagenSubir: any;
   public file!: File;
   public mascota: any;
+  public identity: any;
 
   public archivos: any[] | undefined;
   imagenUrl!: any;
@@ -37,21 +39,26 @@ export class FormCrearComponent implements OnInit {
   error_message!: any;
   success_message!: any;
 
-  constructor(private fb: FormBuilder, private mascotaService: MascotaService) {
-    this.mascota = new Mascota('', '', '', '', '', '', true, '', '', 1, '');
+  constructor(
+    private fb: FormBuilder,
+    private mascotaService: MascotaService,
+    private usuarioService: UsuarioService
+  ) {
+    this.mascota = new Mascota('', '', '', '', true, '', '', '', '', 1);
+    this.identity = this.usuarioService.obtenerIdentidad();
   }
 
   formModal: FormGroup = this.fb.group({
     nombres: ['', [Validators.required]],
     especie: ['', [Validators.required]],
     sexo: ['', [Validators.required]],
-    raza: ['', [Validators.required, Validators.minLength(4)]],
+    raza: ['', [Validators.required, Validators.minLength(2)]],
     estadoDeEsterilizacion: ['', [Validators.required]],
     estadoDeVacunacion: ['', [Validators.required]],
     imagen: [this.file],
     descripcionDeLaMascota: [
       '',
-      [Validators.required, Validators.minLength(15)],
+      [Validators.required, Validators.minLength(10)],
     ],
     fechaDeNacimiento: [new Date().toISOString(), [Validators.required]],
   });
@@ -100,24 +107,21 @@ export class FormCrearComponent implements OnInit {
         this.mascotaService
           .insert_mascota({
             nombre: mascotaForm.value.nombre,
-            edad:mascotaForm.value.edad,
             especie: mascotaForm.value.especie,
             sexo: mascotaForm.value.sexo,
             raza: mascotaForm.value.raza,
             estadoDeEsterilizacion: mascotaForm.value.estadoDeEsterilizacion,
             estadoDeVacunacion: mascotaForm.value.estadoDeVacunacion,
             descripcionDeLaMascota: mascotaForm.value.descripcionDeLaMascota,
-            fechaDeNacimiento:mascotaForm.value.fechaDeNacimiento,
+            fechaDeNacimiento: mascotaForm.value.fechaDeNacimiento,
             imagen: this.file,
-            idusuario: "62a1e8ae851468d5d319f2c4",
+            idusuario: this.identity,
           })
           .subscribe(
             (response) => {
               this.success_message = 'La mascota se correctamente';
-              alert("La mascota se correctamente")
+              alert('La mascota se correctamente');
               this.mascota = new Mascota(
-                '',
-                '',
                 '',
                 '',
                 '',
@@ -125,8 +129,9 @@ export class FormCrearComponent implements OnInit {
                 true,
                 '',
                 '',
-                1,
-                ''
+                '',
+                '',
+                1
               );
               this.imgSelect = '../../../../assets/img/16.png';
               this.imagenUrl = '';
@@ -136,11 +141,11 @@ export class FormCrearComponent implements OnInit {
           );
       } else {
         this.error_message = 'Favor cargue una imagen';
-        alert("Favor cargue una imagen")
+        alert('Favor cargue una imagen');
       }
     } else {
       this.error_message = 'Complete correctamente el formulario';
-      alert("Favor completar los datos del formulario")
+      alert('Favor completar los datos del formulario');
     }
   }
 
@@ -153,5 +158,8 @@ export class FormCrearComponent implements OnInit {
       reader.readAsDataURL(this.file);
       console.log('soy el file ' + this.file);
     }
+  }
+  reloadCurrentPage() {
+    window.location.reload();
   }
 }

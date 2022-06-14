@@ -1,17 +1,163 @@
 .encabezado {
-    background-color: #2A9D8F
+    background-image: linear-gradient(to left, #ffffff, #d9e2f2, #a1cae0, #62b5c0, #2a9d8f);
+    position: relative;
+    height: 70vh;
 }
+
+
+
+
+.bienvenido button {
+    text-align: center;
+    font-family: 'Tajawal', sans-serif;
+    background-color: #264653;
+    color: #ffff;
+    border: none;
+    padding: 0.8em 1.9em;
+    border-radius: 0.35rem;
+    cursor: pointer;
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+/* cambios opcion # 1
+#shape {
+    position: absolute;
+    left: 0;
+    bottom: -2vw;
+}
+.bienvenido button {
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 450%;
+    text-align: center;
+    font-family: 'Tajawal', sans-serif;
+    background-color: #E76F51;
+    color: #ffff;
+    border: none;
+    padding: 0.8em 1.9em;
+    border-radius: 0.35rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+img:not(#shape) {
+    position: absolute;
+    left: 0;
+}
+
+header img:nth-child(1) {
+    opacity: 0.4;
+    bottom: -0.1vw;
+    animation: move-1 5s infinite;
+}
+
+@keyframes move-1 {
+    50% {
+        transform: translateY(15px);
+    }
+}
+
+header img:nth-child(2) {
+    opacity: 0.3;
+    bottom: 0.5vw;
+    animation: move-2 4s infinite;
+}
+
+@keyframes move-2 {
+    50% {
+        transform: translateY(35px);
+    }
+}
+
+header img:nth-child(3) {
+    bottom: 0.3vw;
+    opacity: 0.2;
+    animation: move-3 3.5s infinite;
+}
+
+@keyframes move-3 {
+    50% {
+        transform: translateY(25px);
+    }
+}
+
+header img:nth-child(4) {
+    bottom: 0.1vw;
+    opacity: 0.3;
+    animation: move-4 3s infinite;
+}
+
+@keyframes move-4 {
+    50% {
+        transform: translateY(20px);
+    }
+}
+header {
+    height: 70vh;
+    background-color: #2A9D8F;
+    position: relative;
+    overflow: hidden;
+}
+.bienvenido h1 {
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 150%;
+    font-size: 8vmin;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 3.5em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bienvenido p {
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 350%;
+    text-align: center;
+}
+
+.paws img {
+    width: 220px;
+    opacity: 0.3;
+    position: absolute;
+    left: 0;
+    top: -30px;
+} */
+
+/*cambios opcion # 2 */
+.bienvenido {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bienvenido h1 {
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    color: rgb(25, 25, 25);
+    font-weight: 600;
+    font-size: 3.5em;
+}
+
 
 .fondo-usuario {
-    position: relative;
+    height: 70vh;
 }
 
-svg {
-    position: absolute;
-    right: 0;
-    top: -90px;
+.bienvenido p {
+    font-family: 'Tajawal', sans-serif;
 }
-
 
 
 .mascotas-cards {
@@ -25,6 +171,7 @@ svg {
     background-color: white;
     border-radius: 1rem;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
+    margin-bottom: 60px;
 }
 
 .profile-image {
@@ -32,7 +179,7 @@ svg {
     top: -60px;
     left: 50px;
     border-radius: 1rem;
-    background-image: url(../../../assets/img/img-11.png);
+    /*background-image: url(../../../assets/img/img-11.png);*/
     width: 11rem;
     height: 11rem;
     background-position: center;
@@ -40,7 +187,9 @@ svg {
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
 }
 
-
+.acciones {
+    justify-content: space-around;
+}
 
 .profile-info {
     text-align: center;
@@ -84,7 +233,10 @@ svg {
     justify-content: center;
 }
 
-.btn {
+.boton-adoptar {
+    margin: 0 auto;
+    background-color: #E76F51;
+    color: #ffff;
     border: none;
     padding: 0.8em 1.9em;
     border-radius: 0.35rem;
@@ -92,9 +244,7 @@ svg {
     font-weight: 600;
 }
 
-
-.boton-adoptar {
-    margin: 0 auto;
-    background-color: #E76F51;
-    color: #ffff;
+.tituloDos {
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 25px;
 }

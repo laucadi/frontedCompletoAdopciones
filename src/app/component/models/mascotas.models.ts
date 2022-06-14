@@ -14,14 +14,13 @@ export class Mascota {
   constructor(
     public _id: string,
     public nombre: string,
-    public edad: any,
     public especie: string,
     public raza: string,
-    public imagen: any,
     public estadoDeEsterilizacion: boolean,
     public estadoDeVacunacion: string,
     public descripcionDeLaMascota: any,
     public fechaDeNacimiento: any,
-    public idusurio: string
+    public idusurio: string,
+    public imagen: any
   ) {}
 }

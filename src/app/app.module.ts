@@ -13,6 +13,7 @@ import { PaginaNoAutorizadaComponent } from './component/pagina-no-autorizada/pa
 import { FormCrearComponent } from './component/crear-mascota/form-crear/form-crear.component';
 import { EditarUsuarioComponent } from './component/usuario/editar-usuario/editar-usuario.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { BlogComponent } from './component/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FooterComponent } from './component/footer/footer.component';
     FormCrearComponent,
     EditarUsuarioComponent,
     FooterComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,

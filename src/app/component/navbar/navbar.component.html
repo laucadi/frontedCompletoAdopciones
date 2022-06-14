@@ -13,8 +13,8 @@
             <li *ngIf="!token" class="nav-item px-5">
                 <a class=" cl2 ">Mascotas</a>
             </li>
-            <li *ngIf="!token" class="nav-item px-5">
-                <a class="cl2 ">Donaciones</a>
+            <li class="nav-item px-5">
+                <a class="nav-link active" routerLink="/blog">Blog</a>
             </li>
             <li *ngIf="rol=='rescatista'" class="nav-item px-5">
                 <a class="nav-link active" href="#">Home</a>
@@ -34,7 +34,7 @@
                 <a class="nav-link  active dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">Mis mascotas</a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                    <li><a class="dropdown-item" routerLink="crearMascota">Registrar nueva mascota</a></li>
+                    <li><a class="dropdown-item" routerLink="/crearMascota">Registrar nueva mascota</a></li>
                     <li><a class="dropdown-item">Editar mascotas</a></li>
                 </ul>
             </li>
