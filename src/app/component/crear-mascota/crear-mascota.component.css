@@ -1,16 +1,13 @@
 .encabezado {
-    background-image: linear-gradient(to right, #ffffff, #d9e2f2, #a1cae0, #62b5c0, #2a9d8f);
+    background-image: linear-gradient(to left, #ffffff, #d9e2f2, #a1cae0, #62b5c0, #2a9d8f);
     position: relative;
     height: 70vh;
 }
 
-.container {
-    height: 70vh;
-}
+
 
 
 .bienvenido button {
-    font-family: "Poppins", sans-serif;
     text-align: center;
     font-family: 'Tajawal', sans-serif;
     background-color: #264653;
@@ -149,7 +146,7 @@ header {
     width: 100%;
     font-family: "Poppins", sans-serif;
     color: rgb(25, 25, 25);
-    font-weight: 700;
+    font-weight: 600;
     font-size: 3.5em;
 }
 
@@ -193,9 +190,6 @@ header {
 .acciones {
     justify-content: space-around;
 }
-
-
-
 
 .profile-info {
     text-align: center;
