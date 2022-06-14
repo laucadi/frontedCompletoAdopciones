@@ -13,6 +13,8 @@ import { PaginaNoAutorizadaComponent } from './component/pagina-no-autorizada/pa
 import { FormCrearComponent } from './component/crear-mascota/form-crear/form-crear.component';
 import { EditarUsuarioComponent } from './component/usuario/editar-usuario/editar-usuario.component';
 import { BlogComponent } from './component/blog/blog.component';
+import { ArticuloUnoComponent } from './component/articulos/articulo-uno/articulo-uno.component';
+import { ArticuloDosComponent } from './component/articulos/articulo-dos/articulo-dos.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { BlogComponent } from './component/blog/blog.component';
     FormCrearComponent,
     EditarUsuarioComponent,
     BlogComponent,
+    ArticuloUnoComponent,
+    ArticuloDosComponent,
   ],
   imports: [
     BrowserModule,

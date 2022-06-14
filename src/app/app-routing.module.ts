@@ -1,5 +1,6 @@
 import { ComponentRef, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ArticuloDosComponent } from './component/articulos/articulo-dos/articulo-dos.component';
 import { BlogComponent } from './component/blog/blog.component';
 import { CrearMascotaComponent } from './component/crear-mascota/crear-mascota.component';
 import { InicioComponent } from './component/inicio/inicio.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'navbar', component: NavbarComponent },
   { path: 'editarUsuario', component: EditarUsuarioComponent },
   { path: 'blog', component: BlogComponent },
+  { path: 'articuloDos', component: ArticuloDosComponent },
 ];
 
 @NgModule({

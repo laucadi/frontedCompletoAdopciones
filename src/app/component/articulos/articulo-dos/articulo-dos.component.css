@@ -1,0 +1,139 @@
+.contenedor {
+    background-color: #F6F6F6;
+}
+
+.nota {
+    background-color: #ffff;
+
+}
+
+.imagen {
+    background-image: url("https://blog.laika.com.co/wp-content/uploads/2022/04/p-pexels-simon-robben-549237.jpg.jpeg");
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.articulo h5 {
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    color: #F4A261;
+    padding: 20px 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 25px 0px 10px 20px;
+
+}
+
+.articulo h2 {
+    font-size: 1.6em;
+    padding: 20px 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 30px;
+}
+
+.articulo p {
+    padding: 0 30px;
+    letter-spacing: 0.9px;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.subtitulos {
+    font-weight: bold;
+}
+
+.comentarios {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.comentarios h6 {
+    padding-top: 10px;
+    font-size: .9em;
+    font-weight: 300;
+}
+
+.derecha {
+    display: flex;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-twitter {
+    color: #00acee;
+}
+
+.fa-instagram {
+    color: #E1306C;
+}
+
+.fa-pinterest {
+    color: #E60023;
+}
+
+.derecha i {
+    color: #F4A261;
+}
+
+
+
+
+.barra {
+    background-color: #ffff;
+
+}
+
+.barra h1 {
+    font-size: 1.6em;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.texto h5 {
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    color: #F4A261;
+    padding: 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.texto h3 {
+    font-size: 1em;
+    color: #8C8C8C;
+    font-family: 'Tajawal', sans-serif;
+}
+
+hr {
+    margin: 0;
+    padding: 0 15px;
+    color: #F4A261;
+
+}
+
+.imagen-peque img {
+    width: 100px;
+    align-self: flex-end;
+    padding: 10px 0;
+}
+
+.categorias h1 {
+    font-size: 1.6em;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.categorias h3 {
+    font-size: 1em;
+    color: #8C8C8C;
+    font-family: 'Tajawal', sans-serif;
+    padding: 15px;
+}
+
+.contenedor-2 {
+    padding: 90px;
+}

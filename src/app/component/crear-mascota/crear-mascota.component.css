@@ -140,6 +140,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    animation: bounce;
+    animation-duration: 2s;
 }
 
 .bienvenido h1 {
