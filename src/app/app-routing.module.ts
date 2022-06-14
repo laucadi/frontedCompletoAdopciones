@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'crearMascota', component: CrearMascotaComponent },
   { path: 'no-autorizado', component: PaginaNoAutorizadaComponent },
   { path: 'navbar', component: NavbarComponent },
-  {path: "editarUsuario", component: EditarUsuarioComponent}
+  { path: 'editarUsuario', component: EditarUsuarioComponent },
 ];
 
 @NgModule({
