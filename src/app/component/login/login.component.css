@@ -1,55 +1,57 @@
+.fondo {
+    background-color: #AEDBCE;
+}
+
 section {
-    overflow: hidden;
-    background-color: #6200EE;
-    height: 92vh;
+  overflow: hidden;
+  background-color: #6200ee;
+  height: 92vh;
 }
 
 .formulario {
-    background-color: #6200EE;
-
+  background-color: #AEDBCE;
 }
 
 .bg-image-vertical {
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: auto 100%;
-
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 100%;
 }
 
 form {
-    font-family: 'Poppins', sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
 
+
 .titulo-2 {
-    font-size: 1.2em;
-    color: aliceblue;
+  font-size: 1.2em;
+  color: rgb(13, 13, 13);
+}
+
+.imagen {
+  clip-path: ellipse(70% 70% at 80% 50%);
 }
 
 input {
-    background-color: aliceblue;
+  background-color: aliceblue;
 }
 
 .login {
-    background-color: #FFC107;
+  background-color: #ffc107;
 }
 
 p {
-    color: #FFC107;
-
+  color: #0a0a09;
 }
 
 a {
-    text-decoration: none;
-    color: #EE6002;
-
-
+  text-decoration: none;
+  color: #ee6002;
 }
 
-
 @media (min-width: 1025px) {
-    .h-custom-2 {
-        height: 100%;
-    }
+  .h-custom-2 {
+    height: 100%;
+  }
 }
