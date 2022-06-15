@@ -7,17 +7,14 @@
         <a href =""><img src="assets/img/pet.png"style="width:50px;" alt="" routerLink=""></a>
         <a class="mx-4 navbar-brand cl" routerLink="#">LUCKY PETS</a>
         <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+            <li class="nav-item px-5">
+                <a class="cl2" href="/listado">Adoptame</a>
+            </li>
             <li *ngIf="!token" class="nav-item active px-5">
                 <a class=" cl2" href="#"> Quienes Somos</a>
             </li>
-            <li *ngIf="!token" class="nav-item px-5">
-                <a class=" cl2 ">Mascotas</a>
-            </li>
             <li class="nav-item px-5">
                 <a class=" cl2" routerLink="/blog">Blog</a>
-            </li>
-            <li *ngIf="rol=='rescatista'" class="nav-item px-5">
-                <a class="cl2" href="#">Home</a>
             </li>
             <li *ngIf="rol=='rescatista'" class="nav-item dropdown px-5">
                 <a class="cl2 dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button"
