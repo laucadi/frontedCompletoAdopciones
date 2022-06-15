@@ -17,21 +17,21 @@
                 <a class=" cl2" routerLink="/blog">Blog</a>
             </li>
             <li *ngIf="rol=='rescatista'" class="nav-item px-5">
-                <a class="nav-link active" href="#">Home</a>
+                <a class="cl2" href="#">Home</a>
             </li>
             <li *ngIf="rol=='rescatista'" class="nav-item dropdown px-5">
-                <a class="nav-link  active dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button"
+                <a class="cl2 dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">Mi perfil</a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
                     <li><a class="dropdown-item" routerLink="/editarUsuario">Editar mis datos</a></li>
                 </ul>
                 <ul class="dropdown-menu dropdown-menu-end px-5" aria-labelledby="navbarDropdownPortfolio">
-                    <li><a class="dropdown-item" href="portfolio-overview.html">Mis datos</a></li>
+                    <li><a class="cl2 dropdown-item" href="portfolio-overview.html">Mis datos</a></li>
                 </ul>
             </li>
 
             <li *ngIf="rol=='rescatista'" class="nav-item dropdown">
-                <a class="nav-link  active dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button"
+                <a class="cl2 dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">Mis mascotas</a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
                     <li><a class="dropdown-item" routerLink="/crearMascota">Registrar nueva mascota</a></li>
