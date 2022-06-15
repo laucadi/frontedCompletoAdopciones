@@ -16,6 +16,9 @@ import { BlogComponent } from './component/blog/blog.component';
 import { ArticuloUnoComponent } from './component/articulos/articulo-uno/articulo-uno.component';
 import { ArticuloDosComponent } from './component/articulos/articulo-dos/articulo-dos.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { CartaMascotaComponent } from './component/carta-mascota/carta-mascota.component';
+import { ListadoPublicoComponent } from './component/listado-publico/listado-publico.component';
+import { FormularioComponent } from './component/formulario/formulario.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { FooterComponent } from './component/footer/footer.component';
     BlogComponent,
     ArticuloUnoComponent,
     ArticuloDosComponent,
+    CartaMascotaComponent,
+    ListadoPublicoComponent,
+    FormularioComponent,
   ],
   imports: [
     BrowserModule,

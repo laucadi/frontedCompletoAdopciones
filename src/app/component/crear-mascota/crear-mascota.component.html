@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <main class="flex-shrink-0">
-    <!-- Header opcion # 1-->
-    <!-- <header>
+  <!-- Header opcion # 1-->
+  <!-- <header>
         <img src="../../../assets/img/wave-1.svg" />
         <img src="../../../assets/img/wave-1.svg" />
         <img src="../../../assets/img/wave-1.svg" />
@@ -26,95 +26,59 @@
         </div>
     </header> -->
 
-
-    <header class="encabezado">
-        <div class="container px-5">
-            <div class="row gx-5 align-items-center justify-content-center">
-                <div class="col-lg-6 col-xl-7 col-xxl-6 fondo-usuario">
-                    <div class="my-5 text-center text-xl-start bienvenido">
-                        <h1 class=" mb-4">Bienvenido {{nombre}}!</h1>
-                        <p class="lead fw-normal mb-4">En este espacio puedes registar, editar, actualizar
-                            y eliminar las mascotas que deseas dar en adopcion!
-                        </p>
-                        <button type="submit" (click)="modal()" class="btn mt-4 crear">
-                            Crear mascota
-                        </button>
-                    </div>
-                </div>
-                <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-end paws">
-                    <!-- <img src="https://matchpets.com/wp-content/uploads/2021/08/Publica-tu-anuncio_1-e1631025733912-300x188.png"
+  <header class="encabezado">
+    <div class="container px-5">
+      <div class="row gx-5 align-items-center justify-content-center">
+        <div class="col-lg-6 col-xl-7 col-xxl-6 fondo-usuario">
+          <div class="my-5 text-center text-xl-start bienvenido">
+            <h1 class="mb-4">Bienvenido {{ nombre }}!</h1>
+            <p class="lead fw-normal mb-4">
+              En este espacio puedes registar, editar, actualizar y eliminar las
+              mascotas que deseas dar en adopcion!
+            </p>
+            <button type="submit" (click)="modal()" class="btn mt-4 crear">
+              Crear mascota
+            </button>
+          </div>
+        </div>
+        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-end paws">
+          <!-- <img src="https://matchpets.com/wp-content/uploads/2021/08/Publica-tu-anuncio_1-e1631025733912-300x188.png"
                         alt="" style="width:550px;"> -->
-                    <img src="https://organizacionsalvar.org/wp-content/uploads/2018/02/perro-como-ayudar-organizacion-salvar-01-e1497301198366.png"
-                        alt="" style="width:300px; margin-top: 30px; margin-right: 30px;">
-                </div>
-            </div>
+          <img
+            src="https://organizacionsalvar.org/wp-content/uploads/2018/02/perro-como-ayudar-organizacion-salvar-01-e1497301198366.png"
+            alt=""
+            style="width: 300px; margin-top: 30px; margin-right: 30px"
+          />
         </div>
-    </header>
-    <!-- <div class="forma">
+      </div>
+    </div>
+  </header>
+  <!-- <div class="forma">
     </div> -->
-    <!-- Blog preview section-->
-    <section class="py-5">
-        <div class="container px-5 my-5">
-            <div class="row gx-5 justify-content-center">
-                <div class="col-lg-8 col-xl-6">
-                    <div class="text-center tituloDos">
-                        <h2 class="fw-bolder">Tus mascotas agregadas</h2>
-                    </div>
-                </div>
-            </div>
+  <!-- Blog preview section-->
+  <section class="py-5">
+    <div class="container px-5 my-5">
+      <div class="row gx-5 justify-content-center">
+        <div class="col-lg-8 col-xl-6">
+          <div class="text-center tituloDos">
+            <h2 class="fw-bolder">Tus mascotas agregadas</h2>
+          </div>
         </div>
-        <!--estilo#2-->
-        <div class="row mascotas-cards">
-            <div class="profile-card col-4" *ngFor="let item of datosMascota;">
-                <div class="profile-card-header">
-                    <div class="profile-image">
-                        <img [src]="base_url + 'mascotas/mascotas/img/'+ item.imagen" width="200px" height="200px"
-                            style="border-radius:20px;" alt="Avatar">
-                    </div>
-                    <div class="profile-info">
-                        <h3 class="profile-name">{{item.nombre}}</h3>
-                        <p class="profile-desc">{{item.especie}}</p>
-                        <p>{{item.descripcionDeLaMascota}}</p>
-                    </div>
-                </div>
-                <div class="profile-card-body">
-                    <ul class="status">
-                        <li>
-                            <span class="status-value">2 años</span>
-                            <hr>
-                            <span class="status-text">edad</span>
-                        </li>
+      </div>
+    </div>
+    <!--estilo#2-->
+    <div class="row mascotas-cards">
+      <app-carta-mascota
+        class="carta-mascota"
+        *ngFor="let mascota of datosMascota"
+        [mascota]="mascota"
+        (onEliminarMascota)="eliminarMascota(mascota)"
+      ></app-carta-mascota>
+    </div>
+  </section>
 
-                        <li>
-                            <span class="status-value">{{item.especie}}</span>
-                            <hr>
-                            <span class="status-text">Especie</span>
-                        </li>
-                        <li>
-                            <span class="status-value">{{item.raza}}</span>
-                            <hr>
-                            <span class="status-text">Raza</span>
-                        </li>
-                    </ul>
-                    <div class=" row acciones">
-                        <button class="btn col-6" (click)="eliminarMascota(item)"><i
-                                class="fa-solid fa-trash-can"></i></button>
-
-                        <button class="btn col-6"><i class="fa-solid fa-pencil"></i></button>
-                    </div>
-
-                    <!-- <div class="action">
-
-                        <button class="btn boton-adoptar">Adoptar</button>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-
-
-
-
-    </section>
-
-    <app-form-crear [showModal]="showModal" (onCloseModal)="onCloseModal()"></app-form-crear>
+  <app-form-crear
+    [showModal]="showModal"
+    (onCloseModal)="onCloseModal()"
+  ></app-form-crear>
 </main>

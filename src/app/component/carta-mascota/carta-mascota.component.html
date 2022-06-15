@@ -1,0 +1,55 @@
+<div class="row mascotas-cards">
+  <div class="profile-card col-4">
+    <div class="profile-card-header">
+      <div class="profile-image">
+        <img
+          [src]="base_url + 'mascotas/mascotas/img/' + mascota.imagen"
+          width="200px"
+          height="200px"
+          style="border-radius: 20px"
+          alt="Avatar"
+        />
+      </div>
+      <div class="profile-info">
+        <h3 class="profile-name">{{ mascota.nombre }}</h3>
+        <p class="profile-desc">{{ mascota.especie }}</p>
+        <p class="text-truncate">{{ mascota.descripcionDeLaMascota }}</p>
+      </div>
+    </div>
+    <div class="profile-card-body">
+      <ul class="status">
+        <li>
+          <span class="status-value">{{
+            this.calcularEdad(mascota.fechaDeNacimiento)
+          }}</span>
+          <hr />
+          <span class="status-text">edad</span>
+        </li>
+
+        <li>
+          <span class="status-value">{{ mascota.especie }}</span>
+          <hr />
+          <span class="status-text">Especie</span>
+        </li>
+        <li>
+          <span class="status-value">{{ mascota.raza }}</span>
+          <hr />
+          <span class="status-text">Raza</span>
+        </li>
+      </ul>
+      <div *ngIf="!botonDeAdopcion" class="row acciones">
+        <button class="btn col-6" (click)="eliminarMascota()">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+
+        <button class="btn col-6"><i class="fa-solid fa-pencil"></i></button>
+      </div>
+
+      <div *ngIf="botonDeAdopcion" class="row acciones">
+        <a href="/formulario">
+          <button class="btn btn-adopcion">Adoptame!</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

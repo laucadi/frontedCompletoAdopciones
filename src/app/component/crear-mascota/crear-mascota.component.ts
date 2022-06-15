@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsuarioService } from 'src/app/sevicios/usuario.service';
 import { MascotaService } from 'src/app/sevicios/mascota.service';
-import { Mascota } from '../models/mascotas.models';
 import Swal from 'sweetalert2';
 import { environment } from 'src/environments/environment';
 
@@ -49,16 +48,33 @@ export class CrearMascotaComponent implements OnInit {
       this.router.navigate(['no-autorizado']);
     }
   }
+
   mascotaPorUsuario() {
     this.mascotaService.mascotaPorUsuario(this.idusuario).subscribe((res) => {
       this.datosMascota = res;
       console.log(this.datosMascota);
     });
   }
+
   eliminarMascota(row: any) {
     this.mascotaService.eliminarMascota(row._id).subscribe((res) => {
       Swal.fire('Mascota eliminado!', 'error');
       this.mascotaPorUsuario();
     });
+  }
+
+  public calcularEdad(fecha: string) {
+    const fechaDeNacimiento = new Date(fecha);
+    const anosCompletos =
+      Math.floor(new Date().getTime() - new Date(fechaDeNacimiento).getTime()) /
+      (1000 * 60 * 60 * 24 * 365);
+
+    const anos = Math.floor(anosCompletos);
+    const meses = Math.floor((anosCompletos % 1) * 12);
+
+    if (anos < 1) return `${meses} meses`;
+    if (meses === 0 && anos === 1) return `${anos} año`;
+    if (meses === 0) return `${anos} años`;
+    return `${anos} años y ${meses} meses`;
   }
 }
