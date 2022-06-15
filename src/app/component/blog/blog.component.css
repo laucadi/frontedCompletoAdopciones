@@ -1,323 +1,303 @@
 .tarjeta {
-    height: 400px;
+  height: 400px;
 }
 
 .carousel-caption {
-    position: absolute;
-    right: 15%;
-    top: 320px;
-    /* Cambiar bottom por top y los píxeles que necesites */
-    left: 15%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: black;
-    text-align: left;
+  position: absolute;
+  right: 15%;
+  top: 320px;
+  /* Cambiar bottom por top y los píxeles que necesites */
+  left: 15%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: black;
+  text-align: left;
 }
 
 .carousel-caption h2 {
-    font-size: 4em;
-    font-weight: 600;
+  font-size: 4em;
+  font-weight: 600;
 }
 
 .funciona {
-    background-color: #E9C46A;
-    background-size: cover;
-    margin-bottom: 30px;
-    padding-top: 20px;
-    height: 80vh;
-
+  background-color: #e9c46a;
+  background-size: cover;
+  padding-top: 20px;
+  height: 60vh;
 }
 
 .card {
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    height: 100%;
-    background-color: #E9C46A;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  height: 100%;
+  background-color: #e9c46a;
 }
 
 .card img {
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    position: relative;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
 }
 
 .card-body {
-    padding: 3px;
-    position: absolute;
-    background-color: #ffffff;
-    width: 80%;
-    align-items: center;
-    height: fit-content;
-    top: 60%;
-    left: 10%;
-    z-index: 1;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
+  padding: 3px;
+  position: absolute;
+  background-color: #ffffff;
+  width: 80%;
+  align-items: center;
+  height: fit-content;
+  top: 60%;
+  left: 10%;
+  z-index: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-body h5 {
-    font-weight: 400;
-    font-size: 18px;
-    letter-spacing: 0, 2em;
-    text-align: center;
-    background-color: #ffffff;
-    font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0, 2em;
+  text-align: center;
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
 }
 
 .leer {
-    background-color: #F4A261;
-    color: rgb(30, 29, 29);
-    margin-top: 15px;
-    letter-spacing: 1px;
+  background-color: #f4a261;
+  color: rgb(30, 29, 29);
+  margin-top: 15px;
+  letter-spacing: 1px;
 }
 
 .contenedor {
-    justify-content: space-around;
-    padding-top: 80px;
-    height: 80vh;
+  justify-content: space-around;
+  padding-top: 80px;
+  height: 80vh;
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #hero {
-    padding: 80px 0;
-    min-height: 700px;
-    position: relative;
-    background-color: #FCFAFA;
+  padding: 80px 0;
+  min-height: 700px;
+  position: relative;
+  background-color: #fcfafa;
 }
 
 .hero-img-container {
-    position: absolute;
-    left: 0px;
-    padding: 0;
-
+  position: absolute;
+  left: 0px;
+  padding: 0;
 }
 
 .hero-img {
-    max-width: 540px !important;
-    height: 540px;
-    overflow: hidden;
-    border-radius: 100%;
-    z-index: 0;
-
+  max-width: 540px !important;
+  height: 540px;
+  overflow: hidden;
+  border-radius: 100%;
+  z-index: 0;
 }
 
 .hero-img img {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
 .hero-title {
-    background-color: #FCFAFA;
-    border-radius: 150px;
-    padding: 25px 60px;
-    padding-right: 10px;
-    margin-top: 95px;
-
-
-
+  background-color: #fcfafa;
+  border-radius: 150px;
+  padding: 25px 60px;
+  padding-right: 10px;
+  margin-top: 95px;
 }
 
 .hero-title h1 {
-    font-size: 60px;
-    font-weight: bold;
-    line-height: 70px;
-    color: #E76F51;
-    text-decoration: none;
-    transition: 500ms;
-    font-family: 'Poppins', sans-serif;
-
-
-
-
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 70px;
+  color: #e76f51;
+  text-decoration: none;
+  transition: 500ms;
+  font-family: "Poppins", sans-serif;
 }
 
 .hero-title a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .hero-title a h1:hover {
-    transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 .hero-meta p {
-    font-size: 22px;
-    line-height: 30px;
-    color: #404040;
-    font-family: 'Tajawal', sans-serif;
+  font-size: 22px;
+  line-height: 30px;
+  color: #404040;
+  font-family: "Tajawal", sans-serif;
 }
 
-.author-img, .author-meta {
-    display: inline-block;
-    vertical-align: top;
+.author-img,
+.author-meta {
+  display: inline-block;
+  vertical-align: top;
 }
 
 .author-img {
-    margin-right: 10px;
-    width: 60px;
-    height: 60px;
-    border-radius: 100px;
-
+  margin-right: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
 }
 
 .author-img img {
-    max-width: 100%;
-    height: auto;
-    overflow: hidden;
-    border-radius: 100%;
-
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 100%;
 }
 
 .author-meta span {
-    display: block;
-
+  display: block;
 }
 
 .author-name {
-    font-size: 18px;
-    margin-top: 5px;
-    font-weight: bold;
-    font-family: 'Tajawal', sans-serif;
+  font-size: 18px;
+  margin-top: 5px;
+  font-weight: bold;
+  font-family: "Tajawal", sans-serif;
 }
 
 .author-tag {
-    font-size: 14px;
-    color: #818181;
-    font-family: 'Tajawal', sans-serif;
+  font-size: 14px;
+  color: #818181;
+  font-family: "Tajawal", sans-serif;
 }
 
 .article-card {
-    margin: 20px 0;
-    transition: 400ms;
+  margin: 20px 0;
+  transition: 400ms;
 }
 
 .article-card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-.article-img, .article-meta {
-    display: inline-block;
-    vertical-align: top;
+.article-img,
+.article-meta {
+  display: inline-block;
+  vertical-align: top;
 }
 
 .article-img {
-    max-width: 160px;
-    height: 160px;
-    overflow: hidden;
-    border-radius: 100px;
+  max-width: 160px;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 100px;
 }
 
 .article-img img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .article-meta {
-    max-width: 360px;
-    margin-top: 15px;
-    margin-left: 10px;
+  max-width: 360px;
+  margin-top: 15px;
+  margin-left: 10px;
 }
 
 .article-meta h2 {
-    font-size: 26px;
-    font-weight: bold;
-    color: #000;
-    font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: #000;
+  font-family: "Poppins", sans-serif;
 }
 
 .article-meta p {
-    color: #404040;
-    font-family: 'Tajawal', sans-serif;
+  color: #404040;
+  font-family: "Tajawal", sans-serif;
 }
 
 .btn-lg {
-    font-size: 18px;
-    padding: 10px 30px;
+  font-size: 18px;
+  padding: 10px 30px;
 }
 
 .btn-light {
-    border-radius: 50px;
-    font-weight: bold;
-    background-color: #E76F51;
-    border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  background-color: #e76f51;
+  border: none;
 }
-
-
 
 /* Media Queries */
 
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
+  .hero-img {
+    width: 500px;
+    height: 500px;
+  }
 
-    .hero-img {
-        width: 500px;
-        height: 500px;
-    }
+  .article-card {
+    text-align: center;
+  }
 
-    .article-card {
-        text-align: center;
-    }
-
-    .article-meta {
-        max-width: 450px;
-        text-align: left;
-    }
-
-
+  .article-meta {
+    max-width: 450px;
+    text-align: left;
+  }
 }
 
+@media (max-width: 992px) {
+  #hero {
+    padding: 30px 0 60px;
+  }
 
-@media(max-width: 992px) {
-    #hero {
-        padding: 30px 0 60px;
-    }
+  .hero-img-container {
+    position: static;
+    margin: 10px auto;
+    text-align: center;
+  }
 
-    .hero-img-container {
-        position: static;
-        margin: 10px auto;
-        text-align: center;
-    }
+  .hero-img-container .hero-img {
+    display: inline-block;
+  }
 
-    .hero-img-container .hero-img {
-        display: inline-block;
-    }
+  .hero-title {
+    padding: 0;
+    margin: 0;
+  }
 
-    .hero-title {
-        padding: 0;
-        margin: 0;
-    }
-
-    #hero {
-        text-align: center !important;
-    }
+  #hero {
+    text-align: center !important;
+  }
 }
 
-@media(max-width: 585px) {
+@media (max-width: 585px) {
+  .article-card .text-left {
+    text-align: center !important;
+  }
 
-    .article-card .text-left {
-        text-align: center !important;
-    }
+  .hero-img {
+    width: 350px;
+    height: 350px;
+  }
 
-    .hero-img {
-        width: 350px;
-        height: 350px;
-    }
-
-    .hero-title h1 {
-        font-size: 40px;
-        line-height: 50px;
-    }
+  .hero-title h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
 }
 
-@media(max-width: 320px) {
-    .hero-img {
-        width: 300px;
-        height: 300px;
-    }
+@media (max-width: 320px) {
+  .hero-img {
+    width: 300px;
+    height: 300px;
+  }
 }

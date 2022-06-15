@@ -132,28 +132,19 @@ export class LoginComponent implements OnInit {
 
     if (this.usuariosModel.nombres == '') {
       this.mensaje_error = 'El campo nombre no puede estar vacio';
-    }
-    if (this.usuariosModel.primerApellido == '') {
+    } else if (this.usuariosModel.primerApellido == '') {
       this.mensaje_error = 'El campo primer Apellido no puede estar vacio';
-    }
-    if (this.usuariosModel.segundoApellido == '') {
+    } else if (this.usuariosModel.segundoApellido == '') {
       this.mensaje_error = 'El campo segundo Apellido no puede estar vacio';
-    }
-    if (this.usuariosModel.cedula == '') {
+    } else if (this.usuariosModel.cedula == '') {
       this.mensaje_error = 'El campo cedula no puede estar vacio';
-    }
-
-    if (this.usuariosModel.correo == '') {
+    } else if (this.usuariosModel.correo == '') {
       this.mensaje_error = 'El campo correo no puede estar vacio';
-    }
-    if (this.usuariosModel.contrasena == '') {
+    } else if (this.usuariosModel.contrasena == '') {
       this.mensaje_error = 'El campo contrasena no puede estar vacio';
-    }
-
-    if (this.usuariosModel.rol == '') {
+    } else if (this.usuariosModel.rol == '') {
       this.mensaje_error = 'El campo rol no puede estar vacio';
-    }
-    if (this.usuariosModel.ciudad == '') {
+    } else if (this.usuariosModel.ciudad == '') {
       this.mensaje_error = 'El campo ciudad no puede estar vacio';
     } else {
       this.usuarioService.crear(this.usuariosModel).subscribe(

@@ -4,20 +4,20 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01" style="padding-left:60px;">
-        <a href=""><img src="assets/img/logo.png" style="width: 50px;" alt="" routerLink=""></a>
-        <a class="navbar-brand" routerLink="">LUCKY PETS</a>
+        <a href =""><img src="assets/img/pet.png"style="width:50px;" alt="" routerLink=""></a>
+        <a class="mx-4 navbar-brand cl" routerLink="#">LUCKY PETS</a>
         <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
             <li *ngIf="!token" class="nav-item active px-5">
-                <a class="nav-link active " href="#"> Quienes Somos</a>
+                <a class=" cl2" href="#"> Quienes Somos</a>
             </li>
             <li *ngIf="!token" class="nav-item px-5">
-                <a class="nav-link active ">Mascotas</a>
+                <a class=" cl2 ">Mascotas</a>
             </li>
             <li class="nav-item px-5">
-                <a class="nav-link active" routerLink="/blog">Blog</a>
+                <a class=" cl2" routerLink="/blog">Blog</a>
             </li>
             <li *ngIf="rol=='rescatista'" class="nav-item px-5">
-                <a class="nav-link active " href="#">Home</a>
+                <a class="nav-link active" href="#">Home</a>
             </li>
             <li *ngIf="rol=='rescatista'" class="nav-item dropdown px-5">
                 <a class="nav-link  active dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button"
@@ -40,10 +40,10 @@
             </li>
         </ul>
         <form *ngIf="!token" class="d-flex">
-            <button class="btn mx-3" type="submit" routerLink="login">Login</button>
+            <button class="btn mx-3 cl3" type="submit" routerLink="login">Login</button>
         </form>
         <form *ngIf="token" class="d-flex">
-            <button class="btn btn-danger" (click)="cerrarSesion()">Logout</button>
+            <button class="btn btn-danger cl3" (click)="cerrarSesion()">Logout</button>
         </form>
 
     </div>

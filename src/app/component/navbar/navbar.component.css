@@ -3,11 +3,31 @@
 }
 
 .navbar {
-    background: #FFC107;
+    background: #007965;
 }
 
 button {
-    background-color: #EE6002;
+    background-color: #00AF91;
 
 
+}
+
+.cl{
+    color:aliceblue;
+    font-size: 22px;
+    font-family: cursive;
+    font-weight: 700;
+}
+
+.cl2{
+    color:aliceblue;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+.cl3{
+    color:aliceblue;
+    font-weight: 500;
+    border-radius: 7px;
 }

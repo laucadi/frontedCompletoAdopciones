@@ -15,6 +15,7 @@ import { EditarUsuarioComponent } from './component/usuario/editar-usuario/edita
 import { BlogComponent } from './component/blog/blog.component';
 import { ArticuloUnoComponent } from './component/articulos/articulo-uno/articulo-uno.component';
 import { ArticuloDosComponent } from './component/articulos/articulo-dos/articulo-dos.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ArticuloDosComponent } from './component/articulos/articulo-dos/articul
     PaginaNoAutorizadaComponent,
     FormCrearComponent,
     EditarUsuarioComponent,
+    FooterComponent,
     BlogComponent,
     ArticuloUnoComponent,
     ArticuloDosComponent,
