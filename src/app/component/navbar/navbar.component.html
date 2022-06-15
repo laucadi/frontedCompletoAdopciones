@@ -4,7 +4,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01" style="padding-left:60px;">
-        <a href =""><img src="assets/img/pet.png"style="width:50px;" alt="" routerLink=""></a>
+        <a href =""><img src="assets/img/pet.png"style="width:50px;"></a>
         <a class="mx-4 navbar-brand cl" routerLink="#">LUCKY PETS</a>
         <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
             <li class="nav-item px-5">
@@ -37,7 +37,7 @@
             </li>
         </ul>
         <form *ngIf="!token" class="d-flex">
-            <button class="btn mx-3 cl3" type="submit" routerLink="login">Login</button>
+            <button class="btn mx-3 cl3" type="submit" routerLink="/login">Login</button>
         </form>
         <form *ngIf="token" class="d-flex">
             <button class="btn btn-danger cl3" (click)="cerrarSesion()">Logout</button>
