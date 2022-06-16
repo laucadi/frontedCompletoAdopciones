@@ -260,6 +260,7 @@ header {
     border-radius: 0.35rem;
     cursor: pointer;
     font-weight: 600;
+    width: 230px;
 
     font-family: 'Tajawal', sans-serif;
 }
