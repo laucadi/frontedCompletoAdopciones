@@ -16,13 +16,13 @@ import { BlogComponent } from './component/blog/blog.component';
 import { ArticuloUnoComponent } from './component/articulos/articulo-uno/articulo-uno.component';
 import { ArticuloDosComponent } from './component/articulos/articulo-dos/articulo-dos.component';
 import { FooterComponent } from './component/footer/footer.component';
-<<<<<<< HEAD
+
 import { QuienesSomosComponent } from './component/quienes-somos/quienes-somos.component';
-=======
+
 import { CartaMascotaComponent } from './component/carta-mascota/carta-mascota.component';
 import { ListadoPublicoComponent } from './component/listado-publico/listado-publico.component';
 import { FormularioComponent } from './component/formulario/formulario.component';
->>>>>>> af8dda3b402ec9bf3ef8b7847d3892ce52710c34
+
 
 @NgModule({
   declarations: [
@@ -38,13 +38,13 @@ import { FormularioComponent } from './component/formulario/formulario.component
     BlogComponent,
     ArticuloUnoComponent,
     ArticuloDosComponent,
-<<<<<<< HEAD
+
     QuienesSomosComponent,
-=======
+
     CartaMascotaComponent,
     ListadoPublicoComponent,
     FormularioComponent,
->>>>>>> af8dda3b402ec9bf3ef8b7847d3892ce52710c34
+
   ],
   imports: [
     BrowserModule,
