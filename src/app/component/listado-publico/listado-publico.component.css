@@ -5,7 +5,7 @@
     justify-content: center;
     margin-top: 10vh;
     margin-bottom: 5vh;
-    min-height:80vh;
+    min-height: 80vh;
 }
 
 .card {
@@ -14,4 +14,5 @@
     margin-right: 1em;
     border: none;
     margin-bottom: 2em;
+    text-decoration: none;
 }

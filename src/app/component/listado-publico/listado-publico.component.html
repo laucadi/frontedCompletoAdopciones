@@ -1,10 +1,6 @@
 <app-navbar></app-navbar>
 <section class="card-container">
-  <app-carta-mascota
-    *ngFor="let mascota of mascotas"
-    class="card"
-    [mascota]="mascota"
-    [botonDeAdopcion]="true"
-  ></app-carta-mascota>
+  <app-carta-mascota *ngFor="let mascota of mascotas" class="card" [mascota]="mascota" [botonDeAdopcion]="true">
+  </app-carta-mascota>
 </section>
 <app-footer></app-footer>

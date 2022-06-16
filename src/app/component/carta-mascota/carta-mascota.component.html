@@ -2,13 +2,8 @@
   <div class="profile-card col-4">
     <div class="profile-card-header">
       <div class="profile-image">
-        <img
-          [src]="base_url + 'mascotas/mascotas/img/' + mascota.imagen"
-          width="200px"
-          height="200px"
-          style="border-radius: 20px"
-          alt="Avatar"
-        />
+        <img [src]="base_url + 'mascotas/mascotas/img/' + mascota.imagen" width="200px" height="200px"
+          style="border-radius: 20px" alt="Avatar" />
       </div>
       <div class="profile-info">
         <h3 class="profile-name">{{ mascota.nombre }}</h3>
@@ -21,7 +16,7 @@
         <li>
           <span class="status-value">{{
             this.calcularEdad(mascota.fechaDeNacimiento)
-          }}</span>
+            }}</span>
           <hr />
           <span class="status-text">edad</span>
         </li>
@@ -41,14 +36,15 @@
         <button class="btn col-6" (click)="eliminarMascota()">
           <i class="fa-solid fa-trash-can"></i>
         </button>
-
-        <button class="btn col-6"><i class="fa-solid fa-pencil"></i></button>
       </div>
 
-      <div *ngIf="botonDeAdopcion" class="row acciones">
+      <div *ngIf="rol ==='adoptante'" class="row acciones">
         <a href="/formulario">
           <button class="btn btn-adopcion">Adoptame!</button>
         </a>
+      </div>
+      <div *ngIf="!token" class="row acciones">
+        <button class="btn btn-adopcion" (click)="boton()">Adoptame!</button>
       </div>
     </div>
   </div>
