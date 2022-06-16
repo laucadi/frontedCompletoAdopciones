@@ -8,6 +8,7 @@ import { LoginComponent } from './component/login/login.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { PaginaNoAutorizadaComponent } from './component/pagina-no-autorizada/pagina-no-autorizada.component';
 import { EditarUsuarioComponent } from './component/usuario/editar-usuario/editar-usuario.component';
+import { QuienesSomosComponent } from './component/quienes-somos/quienes-somos.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'editarUsuario', component: EditarUsuarioComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'articuloDos', component: ArticuloDosComponent },
+  { path: 'quienes-somos', component: QuienesSomosComponent }
 ];
 
 @NgModule({

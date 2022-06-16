@@ -16,6 +16,7 @@ import { BlogComponent } from './component/blog/blog.component';
 import { ArticuloUnoComponent } from './component/articulos/articulo-uno/articulo-uno.component';
 import { ArticuloDosComponent } from './component/articulos/articulo-dos/articulo-dos.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { QuienesSomosComponent } from './component/quienes-somos/quienes-somos.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { FooterComponent } from './component/footer/footer.component';
     BlogComponent,
     ArticuloUnoComponent,
     ArticuloDosComponent,
+    QuienesSomosComponent,
   ],
   imports: [
     BrowserModule,

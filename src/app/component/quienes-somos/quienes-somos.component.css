@@ -1,0 +1,103 @@
+.body{
+    color: rgb(248, 184, 106);
+}
+.container{
+    width: 80%;
+    height: 95vh;
+    background-image:url(../../../assets/img/pexels-taryn-elliott-4426355.jpg) ;
+    background-size: cover;
+    margin: auto;
+    margin-top: 5px;
+    border:10px solid black;
+    border-radius:10px;
+    background-position:53%;
+    box-shadow: 0 0 5px black;
+   
+}
+
+.left-side{
+    width: 42%;
+    height: 87vh;
+    position: fixed;
+}
+
+.left-side h1{
+    margin-left: 60px;
+    font-size: 50px;
+    margin-top:30px;
+    color: white;
+    text-shadow: 2px 1px 5px black;
+}
+
+.left-side p{
+    margin-left: 60px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 1px  5px black;
+}
+
+#btn{
+    margin-left: 60px;
+    margin-top: 30px;
+}
+
+#btn button{
+    width: 150px;
+    height: 33px;
+    background-color: #997252;
+    color:white;
+    font-weight:bold;
+    letter-spacing: 5px;
+    border: none;
+    border-radius: 50px;
+    cursor:pointer;
+}
+
+.new-icons{
+    margin-top: 150px;
+    margin-left: 50px;
+
+}
+
+.new-icons i img{
+    margin-left: 15px;
+    cursor: pointer;
+
+}
+
+.right-side{
+    width: 50%;
+    height: 87vh;
+    float: right;
+    /* display: flex ; */
+    /* flex-direction: column;
+    justify-content: space-around; */
+
+
+}
+
+.imagenes{
+    text-align: center;
+    /* margin-top: 182px; */
+    display: flex ;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    gap: 20px;
+    position: absolute;
+    
+
+}
+
+.imagenes  img{
+    margin-left: 10px;
+    border-radius:10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+
+}
+
+.imagenes img:hover{
+    transform: translateY(-10px);
+}
+
