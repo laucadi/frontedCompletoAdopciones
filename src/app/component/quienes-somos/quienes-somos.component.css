@@ -1,103 +1,95 @@
-.body{
-    color: rgb(248, 184, 106);
+.body {
+  color: rgb(248, 184, 106);
 }
-.container{
-    width: 80%;
-    height: 95vh;
-    background-image:url(../../../assets/img/pexels-taryn-elliott-4426355.jpg) ;
-    background-size: cover;
-    margin: auto;
-    margin-top: 5px;
-    border:10px solid black;
-    border-radius:10px;
-    background-position:53%;
-    box-shadow: 0 0 5px black;
-   
+.custom-container {
+  height: 79.2vh;
+  background-image: url(../../../assets/img/pexels-taryn-elliott-4426355.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 10vh;
 }
 
-.left-side{
-    width: 42%;
-    height: 87vh;
-    position: fixed;
+.left-side {
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 700px;
+  border-radius: 2em;
 }
 
-.left-side h1{
-    margin-left: 60px;
-    font-size: 50px;
-    margin-top:30px;
-    color: white;
-    text-shadow: 2px 1px 5px black;
+.left-side h1 {
+  margin-left: 60px;
+  font-size: 50px;
+  margin-top: 30px;
+  color: white;
+  text-shadow: 2px 1px 5px black;
 }
 
-.left-side p{
-    margin-left: 60px;
-    color: white;
-    font-weight: bold;
-    text-shadow: 2px 1px  5px black;
+.left-side p {
+  margin-left: 60px;
+  color: white;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-shadow: 2px 1px 5px black;
 }
 
-#btn{
-    margin-left: 60px;
-    margin-top: 30px;
+#btn {
+  margin-left: 60px;
+  margin-top: 30px;
 }
 
-#btn button{
-    width: 150px;
-    height: 33px;
-    background-color: #997252;
-    color:white;
-    font-weight:bold;
-    letter-spacing: 5px;
-    border: none;
-    border-radius: 50px;
-    cursor:pointer;
+#btn button {
+  width: 150px;
+  height: 33px;
+  background-color: #997252;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 5px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
-.new-icons{
-    margin-top: 150px;
-    margin-left: 50px;
-
+.new-icons {
+  margin-top: 150px;
+  margin-left: 50px;
 }
 
-.new-icons i img{
-    margin-left: 15px;
-    cursor: pointer;
-
+.new-icons i img {
+  margin-left: 15px;
+  cursor: pointer;
 }
 
-.right-side{
-    width: 50%;
-    height: 87vh;
-    float: right;
-    /* display: flex ; */
-    /* flex-direction: column;
-    justify-content: space-around; */
-
-
+.right-side {
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 700px;
+  border-radius: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.imagenes{
-    text-align: center;
-    /* margin-top: 182px; */
-    display: flex ;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: space-around;
-    gap: 20px;
-    position: absolute;
-    
-
+.imagenes {
+  text-align: center;
+  /* margin-top: 182px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  gap: 20px;
+  position: absolute;
 }
 
-.imagenes  img{
-    margin-left: 10px;
-    border-radius:10px;
-    transition: 0.5s ease;
-    cursor: pointer;
-
+.imagenes img {
+  margin-left: 10px;
+  border-radius: 10px;
+  transition: 0.5s ease;
+  cursor: pointer;
 }
 
-.imagenes img:hover{
-    transform: translateY(-10px);
+.imagenes img:hover {
+  transform: translateY(-10px);
 }
-

@@ -16,9 +16,7 @@ import { BlogComponent } from './component/blog/blog.component';
 import { ArticuloUnoComponent } from './component/articulos/articulo-uno/articulo-uno.component';
 import { ArticuloDosComponent } from './component/articulos/articulo-dos/articulo-dos.component';
 import { FooterComponent } from './component/footer/footer.component';
-
 import { QuienesSomosComponent } from './component/quienes-somos/quienes-somos.component';
-
 import { CartaMascotaComponent } from './component/carta-mascota/carta-mascota.component';
 import { ListadoPublicoComponent } from './component/listado-publico/listado-publico.component';
 import { FormularioComponent } from './component/formulario/formulario.component';
@@ -38,9 +36,7 @@ import { FormularioComponent } from './component/formulario/formulario.component
     BlogComponent,
     ArticuloUnoComponent,
     ArticuloDosComponent,
-
     QuienesSomosComponent,
-
     CartaMascotaComponent,
     ListadoPublicoComponent,
     FormularioComponent,
