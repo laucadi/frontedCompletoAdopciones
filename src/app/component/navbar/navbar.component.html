@@ -36,7 +36,7 @@
                     data-bs-toggle="dropdown" aria-expanded="false">Mis mascotas</a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
                     <li><a class="dropdown-item" routerLink="/crearMascota">Registrar nueva mascota</a></li>
-                    <li><a class="dropdown-item">Editar mascotas</a></li>
+                    
                 </ul>
             </li>
         </ul>
@@ -44,7 +44,7 @@
             <button class="btn mx-3 cl3" type="submit" routerLink="/login">Login</button>
         </form>
         <form *ngIf="token" class="d-flex">
-            <button class="btn btn-danger cl3" (click)="cerrarSesion()">Logout</button>
+            <button class="btn cl3" (click)="cerrarSesion()">Logout</button>
         </form>
 
     </div>
